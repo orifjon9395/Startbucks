@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="container">
+            <div class="row centerbitw" style="height: 15vh;">
+                <img src="logo.png" alt="" style="width: 70px;">
+
+                <ul class="center">
+                    <li>
+                        <a class="current" href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Ebout</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Servises</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- ////////////////////////>>>>>>>EBOUT<<<<<<<//////////////////////////////////////// -->
+            <div class="row " style="position: relative;">
+                <div class="box" style="text-align: start;  font-style: italic;">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 style="font-size: 55px;">It's Not Just coffee
+                        It's <span style="color: rgb(38, 97, 39); font-weight: 900;">Startbucks</span>
+                    </h1>
+                    <br>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam sapiente porro tenetur
+                        voluptatum obcaecati ipsam aliquid, voluptas dicta quidem iste numquam repellendus ex assumenda
+                        qui id, incidunt aperiam delectus, inventore eligendi ut quam nemo? Numquam doloremque, facilis
+                        cum quisquam, quae dolorum molestiae sapiente rem, animi nesciunt quam assumenda fuga atque?
+                    </p>
+                    <br>
+                    <br>
+                    <button
+                        style="color: white;background-color: #017143; padding: 10px 35px; border-radius:15px; border: none;">LEARN
+                        MORE</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box2">
+            <ul>
+                <li><img onclick="almash(this)" src="muzblue.png" alt="" class="img3"></li>
+                <li><img onclick="almash(this)" src="muzq.png" alt="" class="img4"></li>
+                <li><img onclick="almash(this)" src="img3.png" alt="" class="img5"></li>
+            </ul>
+        </div>
+        <div class="img11"><img style="width: 100%; height: 100%;" src="muzblue.png" alt=""></div>
+        <div class="box1"></div>
+    </div>
+
+    <script>
+        // var img1 = document.querySelector('.img1');
+        //             console.log(img1);
+
+        var box1 = document.querySelector('.box1');
+
+        var img4 = document.querySelector('.img4');
+
+        img4.addEventListener('click', function () {
+            box1.style.backgroundColor = "#eb7495"
+        });
+
+        var img3 = document.querySelector('.img3');
+
+        img3.addEventListener('click', function () {
+            box1.style.backgroundColor = "#017143"
+        });
+
+        var img5 = document.querySelector('.img5');
+
+        img5.addEventListener('click', function () {
+            box1.style.backgroundColor = "#d752b1"
+        });
+
+
+        var img = document.querySelectorAll('img')
+        console.log("img's", [...img]);
+
+        function almash(img) {
+            var img1 = document.querySelector('div.img11 > img');
+            img1.src = img.src;
+
+        }
+
+        const a = document.querySelectorAll("a")
+        console.log(a)
+        a[0].onclick = function () {
+            this.classList.add('current')
+            a[1].classList.remove('current')
+            a[2].classList.remove('current')
+            a[3].classList.remove('current')
+        }
+
+        a[1].onclick = function () {
+            this.classList.add('current')
+            a[0].classList.remove('current')
+            a[2].classList.remove('current')
+            a[3].classList.remove('current')
+        }
+        a[2].onclick = function () {
+            this.classList.add('current')
+            a[0].classList.remove('current')
+            a[3].classList.remove('current')
+            a[1].classList.remove('current')
+        }
+        a[3].onclick = function () {
+            this.classList.add('current')
+            a[0].classList.remove('current')
+            a[1].classList.remove('current')
+            a[2].classList.remove('current')
+        }
+
+
+    </script>
+
+</body>
+
+</html>
